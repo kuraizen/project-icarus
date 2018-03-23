@@ -1,37 +1,25 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/days/0prequel.rpy", line 138, in script call
-    call day1
-  File "game/days/day1.rpy", line 309, in script
-    m "today was fun "
-IOError: Couldn't find file 'heartmp3'.
+IOError: Couldn't find file '../music/v2.ogg'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/days/0prequel.rpy", line 138, in script call
-    call day1
-  File "game/days/day1.rpy", line 309, in script
-    m "today was fun "
-  File "C:\Users\cryoz\Documents\renpy-6.99.13-sdk\renpy\ast.py", line 624, in execute
-    renpy.exports.say(who, what, interact=self.interact, *args, **kwargs)
-  File "C:\Users\cryoz\Documents\renpy-6.99.13-sdk\renpy\exports.py", line 1173, in say
-    who(what, *args, **kwargs)
-  File "C:\Users\cryoz\Documents\renpy-6.99.13-sdk\renpy\character.py", line 911, in __call__
-    self.do_display(who, what, cb_args=self.cb_args, **display_args)
-  File "C:\Users\cryoz\Documents\renpy-6.99.13-sdk\renpy\character.py", line 747, in do_display
-    **display_args)
-  File "C:\Users\cryoz\Documents\renpy-6.99.13-sdk\renpy\character.py", line 523, in display_say
-    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in script
+    python hide:
+  File "C:\Users\cryoz\Documents\renpy-6.99.13-sdk\renpy\ast.py", line 827, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Users\cryoz\Documents\renpy-6.99.13-sdk\renpy\python.py", line 1764, in py_exec_bytecode
+    exec bytecode in globals, locals
+  File "renpy/common/_layout/screen_main_menu.rpym", line 35, in <module>
+    ui.interact()
   File "C:\Users\cryoz\Documents\renpy-6.99.13-sdk\renpy\ui.py", line 287, in interact
     rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
   File "C:\Users\cryoz\Documents\renpy-6.99.13-sdk\renpy\display\core.py", line 2553, in interact
     repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
-  File "C:\Users\cryoz\Documents\renpy-6.99.13-sdk\renpy\display\core.py", line 2858, in interact_core
-    renpy.audio.audio.interact()
-  File "C:\Users\cryoz\Documents\renpy-6.99.13-sdk\renpy\audio\audio.py", line 1027, in interact
-    periodic()
+  File "C:\Users\cryoz\Documents\renpy-6.99.13-sdk\renpy\display\core.py", line 3104, in interact_core
+    renpy.audio.audio.periodic()
   File "C:\Users\cryoz\Documents\renpy-6.99.13-sdk\renpy\audio\audio.py", line 960, in periodic_thread_main
     periodic_pass()
   File "C:\Users\cryoz\Documents\renpy-6.99.13-sdk\renpy\audio\audio.py", line 917, in periodic_pass
@@ -42,7 +30,7 @@ Full traceback:
     rv = renpy.loader.load(fn)
   File "C:\Users\cryoz\Documents\renpy-6.99.13-sdk\renpy\loader.py", line 548, in load
     raise IOError("Couldn't find file '%s'." % name)
-IOError: Couldn't find file 'heartmp3'.
+IOError: Couldn't find file '../music/v2.ogg'.
 
 Windows-8-6.2.9200
 Ren'Py 6.99.13.2919

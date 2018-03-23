@@ -5,7 +5,7 @@ label start:
    #show v2
  
     scene start
-    play music "music/eternity.mp3"
+    play music "../Test/music/eternity.mp3"
     $ player_name = ""
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "b g room.jpg") to the
