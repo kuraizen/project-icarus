@@ -157,7 +157,7 @@ label sleep:
 
 
 label game:
-
+  
 
 label day_one_morning:
 
