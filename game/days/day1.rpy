@@ -64,6 +64,19 @@ label day1:
     
     "{b}day [day]{/b}"
 
+
+    menu:
+        "I reach to the drawer and i grab"
+
+        
+        "book":
+            $ intellect = 100
+        "cell":
+            $ intuition = 100
+        "grapple watch":
+            $ athletic = 100
+
+
     menu:
         "{b}~Alarm clock~{/b}"
         "wake up":
@@ -71,8 +84,9 @@ label day1:
 
         "Sleep 10 more min":
             jump sleep
-
+            
 label wake:
+    $ maturity += 5
     stop music fadeout 1.0
     "{b}~7:00 AM~{/b}"
     m "i have to get up"
@@ -91,6 +105,7 @@ label wake:
 
 
 label sleep:
+    $ maturity -= 5
     stop music fadeout 1.0
     show bedroom day
     with dissolve
@@ -177,6 +192,7 @@ label transport:
         jump go_home
 
     label bike:
+      $ athletic += 5
       $ first_met = "Akane"
       "i'll get to school faster if i take my bike"
 
@@ -226,6 +242,7 @@ label transport:
        jump day_one_day
 
     label foot:
+       $ athletic += 5
        play music "music/other/mine_re.mp3"
        m  "its not that far i might make it if i run"
 
@@ -280,7 +297,7 @@ label transport:
 
 
     label go_home:
-
+      $ maturity -= 10
       #show home
       #show bed 
       m "i'm going back to sleep i'll just go tomorrow besides its the first day what can go wrong"
@@ -314,7 +331,7 @@ label day_one_day:
 
     
     m "as i drift to sleep i cant help but think about [first_met]"
-
+ 
 
     #$ renpy.movie_cutscene("music/canoe.mp4")
 ###########   

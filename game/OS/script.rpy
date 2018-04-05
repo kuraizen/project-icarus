@@ -15,6 +15,12 @@ image black = "#000"
 define sakura = Character("Sakura", color="cb5e9f") # dream girl
 
 define m = Character('[player_name]', color="#c8c8ff") # main
+
+define m_nvle = Character('[player_name]',color="#006bbf",kind=nvl) # char nvle
+
+define first_name = ""
+
+define last_name = ""
 #female
 define kaori = Character("Kaori",color="cba1e9") # childhood friend
 
@@ -65,7 +71,35 @@ define motoko_pts = 0
 
 define day = 1
 
+
+#atributes
+
+#will get changed at start main attribute
+define main_attributes = -1
+define main_personality = "" #char personality 
+#reserved outgoing proud happy-golucky muscle 
+define second_attr = ""
+# intellegent muscle airhead normal mean cunning 
+
+
+
+define intellect = 0 #intellect
+define intuition = 0 #social
+define athletic = 0  #athletic 
+
+# char starts with goodness and meanness that chages based on decisions
+
+define goodness = 50 #def
+define meanness = 10 #def
+
+define maturity = 50 #immatture <30 mature >100
+
 # The game starts here.
+
+
+
+
+
 
 call start
 
